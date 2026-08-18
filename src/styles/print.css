@@ -1,0 +1,67 @@
+/* Print styles for A4 sheet output */
+
+@media print {
+  /* Hide all interactive UI components */
+  header,
+  .sidebar,
+  .property-panel,
+  .canvas-controls,
+  .resize-handle,
+  .anchor-point,
+  .grid-dots,
+  .a4-border-guide {
+    display: none !important;
+  }
+
+  /* Reset layout constraints for printing */
+  html, body, #root, .app-container, .app-main {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .canvas-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #ffffff !important;
+    overflow: visible !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  svg.flowchart-canvas {
+    background: #ffffff !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+
+  /* Optimize node colors for crisp black & white printing if necessary or keep vibrant high contrast */
+  .flowchart-node text {
+    fill: #000000 !important;
+    font-weight: 500;
+  }
+}
+
+/* Page orientation dynamic support */
+body.print-portrait {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}
+
+body.print-landscape {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+}
