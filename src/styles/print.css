@@ -44,10 +44,36 @@
     max-height: 100% !important;
   }
 
-  /* Optimize node colors for crisp black & white printing if necessary or keep vibrant high contrast */
+  /* Optimize node and text colors for high-contrast, crystal-clear A4 printing */
+  .flowchart-node rect,
+  .flowchart-node polygon {
+    fill: #ffffff !important;
+    stroke: #0f172a !important;
+    stroke-width: 2px !important;
+  }
+
   .flowchart-node text {
-    fill: #000000 !important;
-    font-weight: 500;
+    fill: #0f172a !important;
+    font-weight: 600 !important;
+  }
+
+  .connector-element path {
+    stroke: #0f172a !important;
+    stroke-width: 2px !important;
+  }
+
+  .connector-element marker path {
+    fill: #0f172a !important;
+  }
+
+  .connector-element text {
+    fill: #0f172a !important;
+    font-weight: 600 !important;
+  }
+
+  .connector-element rect {
+    fill: #ffffff !important;
+    stroke: #0f172a !important;
   }
 }
 
