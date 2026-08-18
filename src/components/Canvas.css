@@ -4,13 +4,15 @@
   background-color: var(--bg-app);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   overflow: auto;
   position: relative;
   padding: 2rem;
 }
 
 .flowchart-canvas {
+  margin: auto;
+  flex-shrink: 0;
   background-color: var(--bg-app);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
